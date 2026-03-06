@@ -4,6 +4,291 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>E-Shop Contact Page</title>
+
+    <!-- Global Css -->
+    <link rel="stylesheet" href="./styles/global.css" />
+
+    <!-- Css Link -->
+    <link rel="stylesheet" href="./styles/contact.css" />
+
+    <!-- Fontawesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
-  <body></body>
+  <body>
+    <!-- Header -->
+    <header>
+      <!-- Logo -->
+      <a href="#" class="logo">
+        <h1>E-Shop</h1>
+      </a>
+
+      <!-- Navigation -->
+      <nav>
+        <a href="/">Home</a>
+        <a href="/products.html">Products</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+
+      <!-- Buttons -->
+      <div class="buttons">
+        <!-- Menu Btn -->
+        <button id="menu-btn">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <!-- Close Btn -->
+        <button id="close-btn">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <!-- Search Btn -->
+        <button>
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+
+        <!-- Cart Btn -->
+        <button id="cart-btn">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span>3</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+      <!-- Hero -->
+      <section class="hero contact-hero">
+        <!-- Content -->
+        <div class="hero-content">
+          <!-- Title -->
+          <h1>Contact</h1>
+
+          <!-- Description -->
+          <p>Get in touch with us</p>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="contact-wrapper">
+        <!-- container -->
+        <div class="container">
+          <!-- Information -->
+          <div class="contact-information">
+            <!-- Title -->
+            <h2>Contact Information</h2>
+
+            <!-- Information Box-1 -->
+            <div class="information-box">
+              <!-- Icon -->
+              <i class="fa-solid fa-location-dot"></i>
+
+              <!-- Info -->
+              <div>
+                <h3>Address</h3>
+                <p>Atatürk Street No:123 Kadikoy, Istanbul</p>
+              </div>
+            </div>
+
+            <!-- Information Box-2 -->
+            <div class="information-box">
+              <!-- Icon -->
+              <i class="fa-solid fa-phone"></i>
+
+              <!-- Info -->
+              <div>
+                <h3>Phone</h3>
+                <p>+90 555 123 98 76</p>
+              </div>
+            </div>
+
+            <!-- Information Box-3 -->
+            <div class="information-box">
+              <!-- Icon -->
+              <i class="fa-solid fa-envelope"></i>
+
+              <!-- Info -->
+              <div>
+                <h3>Email</h3>
+                <p>info@eshop.com</p>
+              </div>
+            </div>
+
+            <!-- Social -->
+            <div class="social-links">
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+          </div>
+
+          <form>
+            <!-- Title -->
+            <h2>Contact Us</h2>
+
+            <!-- Form Group-1 -->
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" />
+            </div>
+
+            <!-- Form Group-2 -->
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" />
+            </div>
+
+            <!-- Form Group-3 -->
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" />
+            </div>
+
+            <!-- Form Group-4 -->
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea id="message"></textarea>
+            </div>
+
+            <!-- button -->
+            <button>Send</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Map -->
+      <section class="map-section">
+        <!-- Title -->
+        <h2>Location</h2>
+
+        <!-- Map -->
+        <div class="map-container">
+          <iframe
+            class="map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2916.236332984482!2d32.83484503044301!3d39.92470908054959!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34f190a9cea8f%3A0xd3862ea8248d08a0!2sAn%C4%B1tkabir!5e1!3m2!1str!2str!4v1772829830674!5m2!1str!2str"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <!-- Footer Top -->
+      <div class="footer-top">
+        <!-- Footer Item-1 -->
+        <div class="footer-item">
+          <!-- Title -->
+          <h3>About Us</h3>
+
+          <!-- Paragraf -->
+          <p>Modern and quality products e-commerce pratform</p>
+          <p>We've been serving our customers since 2010.</p>
+        </div>
+
+        <!-- Footer Item-2 -->
+        <div class="footer-item">
+          <!-- Title -->
+          <h3>Quick Links</h3>
+
+          <!-- List -->
+          <ul>
+            <li>
+              <a href="/">Home</a>
+            </li>
+
+            <li>
+              <a href="/products.html">Products</a>
+            </li>
+
+            <li>
+              <a href="/about.html">About Us</a>
+            </li>
+
+            <li>
+              <a href="/contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Footer Item-3 -->
+        <div class="footer-item">
+          <!-- Title -->
+          <h3>Contact Info</h3>
+
+          <!-- Info Items -->
+          <p>
+            <i class="fa-solid fa-location-dot"></i>
+            123 Main St, City, Country
+          </p>
+
+          <p>
+            <i class="fa-solid fa-phone"></i>
+            +1 234 567 890
+          </p>
+
+          <p>
+            <i class="fa-solid fa-envelope"></i>
+            info@eshop.com
+          </p>
+        </div>
+
+        <!-- Footer Item-4 -->
+        <div class="footer-item">
+          <!-- Title -->
+          <h3>Follow Us</h3>
+
+          <!-- Social Links -->
+          <div class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="newsletter">
+            <!-- Title -->
+            <h4>Subscribe to Newsletter</h4>
+
+            <!-- Form -->
+            <form>
+              <input type="email" placeholder="Enter your email" />
+              <button>Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p>
+          &copy; 2026 E-shop. All rgihts reserved. Created By
+          <span>Yusuf YAMAN</span>
+        </p>
+
+        <!-- Links -->
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#"> Cookie Policy</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Js Connection -->
+    <script src="./main.js"></script>
+  </body>
 </html>
