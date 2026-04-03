@@ -1,0 +1,90 @@
+@use "./variables";
+@use "./mixin";
+
+header {
+  display: grid;
+  grid-template-areas: "logo nav right";
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  border-bottom: 1px solid variables.$color-border;
+  gap: variables.$space-sm;
+  padding: variables.$space-md variables.$space-lg;
+
+  @include mixin.desktop {
+    grid-template-areas: "logo logo right" "nav nav nav";
+  }
+
+  //   Logo
+  .logo {
+    grid-area: logo;
+    display: flex;
+    align-items: center;
+    gap: variables.$space-xs;
+
+    img {
+      width: 32px;
+    }
+
+    span {
+      font-size: variables.$font-md;
+      color: variables.$color-pink;
+      font-weight: 600;
+
+      @include mixin.tablet {
+        display: none;
+      }
+    }
+  }
+
+  // nav
+  nav {
+    grid-area: nav;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: variables.$space-lg;
+
+    @include mixin.laptop {
+      display: none;
+    }
+
+    a {
+      color: variables.$color-black;
+      font-weight: 500;
+    }
+  }
+
+  // right
+  .right {
+    grid-area: right;
+    display: flex;
+    align-items: center;
+    gap: variables.$space-sm;
+
+    a {
+      font-size: variables.$font-sm;
+      color: variables.$color-black;
+
+      @include mixin.mobile {
+        display: none;
+      }
+    }
+
+    .btn {
+      background: none;
+      cursor: pointer;
+      font-size: variables.$font-md;
+      border: 1px solid variables.$color-border;
+      padding: 10px 15px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      gap: variables.$space-md;
+      transition: variables.$transition;
+
+      &:hover {
+        box-shadow: variables.$shadow-lg;
+      }
+    }
+  }
+}
