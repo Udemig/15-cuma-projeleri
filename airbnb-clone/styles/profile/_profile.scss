@@ -1,0 +1,48 @@
+@use "../base/variables";
+@use "../base/mixin";
+
+.profile-section {
+  display: flex;
+  align-items: center;
+  gap: variables.$space-lg;
+  padding: variables.$space-lg variables.$space-md;
+
+  @include mixin.tablet {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: variables.$space-md;
+
+    h2 {
+      font-size: variables.$font-lg;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: variables.$font-md;
+      color: variables.$color-light-gray;
+    }
+
+    button {
+      @include mixin.button;
+      padding: variables.$space-sm variables.$space-md;
+      font-size: variables.$font-sm;
+      font-weight: 700;
+
+      &:hover {
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.74);
+      }
+    }
+  }
+}

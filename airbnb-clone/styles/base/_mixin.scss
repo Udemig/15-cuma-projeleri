@@ -1,3 +1,5 @@
+@use "./variables";
+
 @mixin desktop {
   @media (max-width: 1200px) {
     @content;
@@ -26,4 +28,15 @@
   @media (max-width: 400px) {
     @content;
   }
+}
+
+// Button
+@mixin button {
+  background-color: #fb385c;
+  color: variables.$color-white;
+  padding: variables.$space-sm variables.$space-lg;
+  border-radius: variables.$radius-md;
+  font-size: variables.$font-md;
+  cursor: pointer;
+  transition: variables.$transition;
 }

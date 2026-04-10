@@ -1,0 +1,50 @@
+@use "../base/variables";
+
+.filter-section {
+  display: flex;
+  align-items: center;
+  gap: variables.$space-lg;
+  overflow: auto;
+  padding: variables.$space-md variables.$space-lg;
+  border-bottom: 1px solid variables.$color-border;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filter-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: variables.$font-sm;
+    color: variables.$color-light-gray;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: variables.$transition;
+
+    i {
+      font-size: variables.$font-lg;
+      margin: variables.$space-xs;
+    }
+
+    &:hover {
+      font-weight: 700;
+      color: variables.$color-black;
+    }
+  }
+
+  .filter-button {
+    display: flex;
+    align-items: center;
+    gap: variables.$space-xs;
+    border: 1px solid variables.$color-border;
+    padding: variables.$space-sm variables.$space-md;
+    border-radius: variables.$radius-md;
+    cursor: pointer;
+    transition: variables.$transition;
+
+    &:hover {
+      background-color: #f7f7f7;
+    }
+  }
+}

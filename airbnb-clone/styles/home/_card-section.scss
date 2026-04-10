@@ -1,0 +1,96 @@
+@use "../base/variables";
+
+.cards-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: variables.$space-lg;
+  padding: variables.$space-lg variables.$space-lg;
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: variables.$space-sm;
+
+    &-image {
+      position: relative;
+      width: 100%;
+      border-radius: variables.$radius-md;
+      overflow: hidden;
+
+      &:hover img {
+        scale: 1.03;
+      }
+
+      img {
+        width: 100%;
+        transition: variables.$transition;
+        object-fit: cover;
+        aspect-ratio: 4/3;
+        border-radius: variables.$radius-md;
+      }
+
+      .favorite-label {
+        position: absolute;
+        top: variables.$space-sm;
+        left: variables.$space-md;
+        background-color: variables.$color-white;
+        font-size: variables.$font-sm;
+        padding: variables.$space-xs variables.$space-sm;
+        border-radius: variables.$radius-full;
+        box-shadow: variables.$shadow-sm;
+      }
+
+      .favorite-button {
+        position: absolute;
+        top: variables.$space-sm;
+        right: variables.$space-sm;
+        background: none;
+        cursor: pointer;
+        font-size: 1.2rem;
+        color: variables.$color-light-gray;
+      }
+    }
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      gap: variables.$space-md;
+
+      .card-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: variables.$space-sm;
+
+        h3 {
+          font-size: variables.$font-md;
+          font-weight: 600;
+          color: variables.$color-dark-gray;
+          white-space: nowrap;
+        }
+
+        .rating {
+          display: flex;
+          align-items: center;
+          gap: variables.$space-xs;
+          font-size: variables.$font-md;
+
+          span {
+            font-weight: 500;
+          }
+        }
+      }
+
+      .distance {
+        color: variables.$color-light-gray;
+        font-size: variables.$font-md;
+      }
+
+      .price {
+        font-size: variables.$font-md;
+        color: variables.$color-dark-gray;
+      }
+    }
+  }
+}
