@@ -1,0 +1,20 @@
+@use "./variables" as v;
+
+@mixin flexBox {
+  display: flex;
+  align-items: center;
+}
+
+@mixin icon {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  font-size: 25px;
+  transition: all 0.4s ease;
+
+  &:hover {
+    background-color: v.$hover-effect;
+  }
+}

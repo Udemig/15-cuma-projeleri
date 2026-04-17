@@ -1,0 +1,180 @@
+@use "../base/variables";
+@use "../base/global";
+@use "../base/mixin";
+
+.experience-hero {
+  @extend .hero-container;
+
+  h1 {
+    font-size: 2.5rem;
+    white-space: nowrap;
+
+    @include mixin.mobile {
+      font-size: 1.5rem;
+    }
+  }
+
+  p {
+    color: variables.$color-light-gray;
+    font-size: variables.$font-md;
+    line-height: variables.$space-lg;
+  }
+}
+
+// Filter
+.experience-filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: variables.$space-md;
+  padding: variables.$space-sm variables.$space-lg;
+  flex-wrap: wrap;
+
+  button {
+    background-color: variables.$color-white;
+    padding: variables.$space-sm variables.$space-md;
+    border: 1px solid variables.$color-border;
+    border-radius: variables.$radius-full;
+    font-size: variables.$font-sm;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #f7f7f7;
+    }
+  }
+}
+
+// Story
+.experience-story {
+  display: flex;
+  align-items: center;
+  gap: variables.$space-lg;
+  flex-wrap: wrap;
+  margin: 50px auto;
+  width: 90%;
+
+  @include mixin.tablet {
+    flex-direction: column;
+  }
+}
+
+.story-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: variables.$space-md;
+
+  h2 {
+    font-size: variables.$font-lg;
+    white-space: nowrap;
+
+    @include mixin.mobile {
+      font-size: 1.25rem;
+    }
+  }
+
+  p {
+    font-size: variables.$font-md;
+    line-height: 1.6;
+    color: variables.$color-light-gray;
+  }
+}
+
+.story-image {
+  flex: 1;
+
+  img {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: variables.$radius-md;
+    object-fit: cover;
+  }
+}
+
+// Reviews
+.experience-reviews {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: variables.$space-lg;
+  margin: variables.$space-lg auto;
+  padding: variables.$space-lg variables.$space-md;
+
+  //   Card
+  .review-card {
+    display: flex;
+    gap: variables.$space-md;
+    border: 1px solid variables.$color-border;
+    padding: variables.$space-md;
+    border-radius: variables.$radius-md;
+    transition: variables.$transition;
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    // Image
+    img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .review-content {
+      display: flex;
+      flex-direction: column;
+      gap: variables.$space-sm;
+
+      // name
+      h3 {
+        font-size: variables.$font-md;
+        font-weight: 600;
+      }
+
+      // location
+      .location {
+        color: variables.$color-light-gray;
+        font-size: variables.$font-sm;
+      }
+
+      // review
+      .review {
+        font-size: variables.$font-md;
+      }
+
+      // rating
+      .rating {
+        font-size: variables.$font-md;
+
+        i {
+          color: variables.$color-pink;
+        }
+      }
+    }
+  }
+}
+
+// Share Experience
+.share-experience {
+  @extend .hero-container;
+
+  // Title
+  h2 {
+    font-size: 2rem;
+  }
+
+  // Description
+  p {
+    font-size: variables.$font-md;
+  }
+
+  // button
+  button {
+    @include mixin.button;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

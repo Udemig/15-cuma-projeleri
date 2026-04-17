@@ -1,0 +1,14 @@
+@use "./base/reset";
+@use "./base/variables";
+@use "./base/mixin";
+@use "./base/global-style";
+
+@use "./components/header";
+
+// Google Fonts
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: variables.$nav-background;
+}

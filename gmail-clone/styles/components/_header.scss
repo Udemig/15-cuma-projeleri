@@ -1,0 +1,99 @@
+@use "../base/variables";
+@use "../base/mixin";
+@use "../base/global-style" as gb;
+
+header {
+  @include gb.flexBox;
+  justify-content: space-between;
+  padding: 20px;
+  height: 90px;
+  gap: 20px;
+
+  // left
+  .header-left {
+    @include gb.flexBox;
+    gap: 10px;
+
+    // menu button
+    #menu-btn {
+      @include gb.icon;
+    }
+
+    // logo
+    .logo {
+      @include gb.flexBox;
+      gap: 10px;
+
+      span {
+        font-size: 20px;
+        font-weight: 400;
+
+        @include mixin.lg {
+          display: none;
+        }
+      }
+    }
+  }
+
+  // Form
+  .search-form {
+    @include gb.flexBox;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 700px;
+    background-color: variables.$search-input;
+    padding: 10px 25px;
+    border-radius: 30px;
+
+    @include mixin.md {
+      max-width: 300px;
+    }
+
+    button {
+      @include gb.icon;
+      font-size: 20px;
+
+      @include mixin.md {
+        width: 10px;
+        height: 10px;
+        font-size: 15px;
+        @include gb.flexBox;
+      }
+
+      @include mixin.sm {
+        display: none;
+      }
+    }
+
+    input {
+      flex: 1;
+      background: transparent;
+      font-size: 18px;
+    }
+  }
+
+  //   Icons
+  .header-icons {
+    @include gb.flexBox;
+    gap: 15px;
+
+    i {
+      @include gb.icon;
+
+      @include mixin.lg {
+        font-size: 20px;
+      }
+
+      @include mixin.md {
+        display: none;
+      }
+    }
+
+    .user-image {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+    }
+  }
+}
